@@ -1,0 +1,38 @@
+.client {
+  height: 29vh;
+  background-color: whitesmoke;
+  justify-content: center;
+  text-align: center;
+  padding-top: 29px;
+  color: black;
+  font-weight: 300;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  flex-wrap: wrap;
+}
+.logo {
+  display: flex;
+  text-wrap: wrap;
+  gap: 100px;
+  width: 87%;
+  margin-top: 49px;
+  animation: scroll infinite 30s linear;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 834px) {
+  .client {
+    width: auto;
+    height: auto;
+  }
+  .logo {
+    gap: 15px;
+    padding-bottom: 50px;
+  }
+}

@@ -1,0 +1,81 @@
+.seo-div {
+  height: 50vh;
+  margin-top: 50px;
+}
+.seo {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.fri {
+  font-size: xx-large;
+  font-weight: 200;
+}
+.ptag {
+  font-size: large;
+  color: rgba(46, 45, 45, 0.568);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.img3 {
+  width: 50%;
+}
+.friendly {
+  width: 50%;
+}
+.read-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: darkgray;
+  border-style: solid;
+  color: white;
+  border-width: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.read-button:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border-style: solid;
+  color: black;
+  border-width: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 834px) {
+  .seo-div {
+    height: auto;
+    width: auto;
+  }
+  .seo {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .img3 {
+    width: 100%;
+  }
+  .friendly {
+    width: 100%;
+  }
+  .ptag {
+    width: 100%;
+  }
+}

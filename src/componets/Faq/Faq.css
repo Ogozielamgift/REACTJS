@@ -1,0 +1,49 @@
+.FAQ {
+  height: 29vh;
+  background-color: rgba(161, 152, 152, 0.479);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: black;
+  text-wrap: wrap;
+  gap: 200px;
+}
+.h {
+  margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 50px;
+  background-color: whitesmoke;
+  color: black;
+  cursor: pointer;
+  margin-top: 87px;
+  border-color: darkgray;
+  border-radius: 7px;
+}
+.down:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 50px;
+  background-color: darkgray;
+  color: black;
+  cursor: pointer;
+}
+@media (max-width: 834px) {
+  .FAQ {
+    height: auto;
+  }
+  .h {
+    width: 90%;
+  }
+  .down {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

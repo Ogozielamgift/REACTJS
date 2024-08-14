@@ -1,0 +1,108 @@
+.hero {
+  background-color: blue;
+  height: 100vh;
+  background-image: url("../../assets/Images/photoworkjpg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+  background-attachment: fixed;
+}
+.we {
+  font-size: 50px;
+  color: white;
+  font-weight: 400;
+  font-family: inherit;
+  text-align: center;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-content: center;
+}
+.word {
+  font-size: 50px;
+  color: white;
+  font-weight: 100;
+  font-family: inherit;
+  text-align: center;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-content: center;
+}
+.pp {
+  display: block;
+}
+.p {
+  color: white;
+  margin-top: 15px;
+  font-size: medium;
+}
+.first-button {
+  width: 300px;
+  height: 70px;
+  color: white;
+  background-color: darkgrey;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-button {
+  width: 300px;
+  height: 70px;
+  color: white;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 25px;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.first-button:hover {
+  width: 300px;
+  height: 70px;
+  color: black;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.sec-button:hover {
+  width: 300px;
+  height: 70px;
+  color: black;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

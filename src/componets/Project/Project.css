@@ -1,0 +1,183 @@
+.projects {
+  height: 103vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: black;
+}
+.projects h2 {
+  font-size: 47px;
+  font-weight: 100;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+.projects p {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 10px;
+}
+.phot-div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.phot-div div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.phot-div div {
+  width: calc(100% / 4);
+  cursor: pointer;
+  position: relative;
+}
+.phot-div div:hover .sydney {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .Austria {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .southafrica {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .canada {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .thai {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .usa {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .Mexico {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .italy {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .france {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.phot-div div:hover .Malta {
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.sydney,
+.Austria,
+.southafrica,
+.canada,
+.thai,
+.usa,
+.Mexico,
+.italy,
+.france,
+.Malta {
+  color: white;
+  opacity: 0;
+}
+
+@media (max-width: 834px) {
+  .projects {
+    height: auto;
+  }
+}

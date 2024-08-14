@@ -1,0 +1,50 @@
+.tittle {
+  background-image: url("../../assets/Images/Aigars.jpg");
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 29px;
+  background-position: center;
+  background-size: cover;
+}
+.test {
+  justify-content: center;
+  text-align: center;
+  background-image: url("../../assets/Images/photoworkjpg.jpg");
+  background-attachment: fixed;
+  height: 45vh;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.tag {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 19px;
+  color: white;
+  font-weight: 300;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.page {
+  padding-top: 87px;
+  color: black;
+  text-align: center;
+}
+.john {
+  margin-top: 20px;
+  color: black;
+  font-size: medium;
+}
+@media (max-width: 834px) {
+  .test {
+    height: auto;
+  }
+  
+}

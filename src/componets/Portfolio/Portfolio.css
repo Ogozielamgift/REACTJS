@@ -1,0 +1,85 @@
+.port-div {
+  height: 70vh;
+  margin-top: 80px;
+  background-color: whitesmoke;
+  align-content: center;
+}
+.portt {
+  display: flex;
+  width: 88%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.fris {
+  font-size: xx-large;
+  font-weight: 200;
+}
+.p-tag {
+  font-size: large;
+  color: rgba(46, 45, 45, 0.568);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+.img5 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.img4 {
+  width: 79%;
+}
+.friends {
+  width: 50%;
+}
+.read-button1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: darkgray;
+  border-style: solid;
+  color: white;
+  border-width: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.read-button1:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border-style: solid;
+  color: black;
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+@media (max-width: 834px) {
+  .ptag {
+    width: 100%;
+  }
+  .portt {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .img4 {
+    width: 100%;
+  }
+  .friends {
+    width: 100%;
+  }
+  .p-tag {
+    width: 100%;
+  }
+  .port-div {
+    height: auto;
+  }
+}
