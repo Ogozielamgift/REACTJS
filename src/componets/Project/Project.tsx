@@ -1,7 +1,7 @@
 import React from "react";
 import "./Project.css";
-import image from "../../assets/Images/photowork6.jpg";
-import images from "../../assets/Images/photowork7.jpg";
+import sydney from "../../assets/Images/photowork6.jpg";
+import Austria from "../../assets/Images/photowork7.jpg";
 import photo from "../../assets/Images/photowork8.jpg";
 import canada from "../../assets/Images/photowork9.jpg";
 import thai from "../../assets/Images/photowork10.jpg";
@@ -18,11 +18,11 @@ const Project = () => {
         <p>Here is our latest Projects. You'll love them!</p>
         <div className="phot-div">
           <div>
-            <img src={image} />
+            <img src={sydney} />
             <p className="sydney">Sydney</p>
           </div>
           <div>
-            <img src={images} />
+            <img src={Austria} />
             <p className="Austria">Austria</p>
           </div>
           <div>

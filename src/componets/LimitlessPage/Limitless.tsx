@@ -1,6 +1,6 @@
 import React from "react";
 import "./Limitless.css";
-import image from "../../assets/Images/photowork5.jpg";
+import php from "../../assets/Images/photowork5.jpg";
 const Limitless = () => {
   return (
     <div>
@@ -15,7 +15,7 @@ const Limitless = () => {
           </p>
           <div className="download">DOWNLOAD NOW</div>
           <div className="photo">
-            <img src={image} />
+            <img src={php} />
           </div>
         </div>
       </div>

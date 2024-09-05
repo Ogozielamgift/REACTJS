@@ -13,8 +13,9 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Link, NavLink } from "react-router-dom";
 
-const pages = ["HOME", "BLOG", "PORTFOLIO", "ABOUT US", "LEVEL1", "SHOP"];
+const pages = ["HOME", "BLOG", "PORTFOLIO", "ABOUT US"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -60,7 +61,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            Shapely Demo
+            <Link to="/">Shapely Demo</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -122,9 +123,18 @@ function ResponsiveAppBar() {
             <div className="nav-links">
               <div>HOME</div>
               <div>BLOG</div>
-              <div>PORTFOLIO</div>
-              <div>ABOUT US</div>
-              <div>SHOP</div>
+              <div>
+                <Link to="/About-us"> ABOUT US</Link>
+              </div>
+              <div>
+                <Link to="Contact-us">CONTACT US</Link>
+              </div>
+              <div>
+                <Link to="/login">LOGIN</Link>
+              </div>
+              <div>
+                <Link to="/SignUp">SIGNUP</Link>
+              </div>
             </div>
           </Box>
 

@@ -1,5 +1,5 @@
 .EE {
-  height: 100vh;
+  height: auto;
   align-content: center;
   text-align: center;
   background-attachment: fixed;
@@ -14,8 +14,11 @@
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 80px;
+}
+.limitless h1 {
+  font-size: xx-large;
+  font-weight: 600;
 }
 .pX {
   color: black;
@@ -65,8 +68,8 @@
   border-color: darkgray;
 }
 .photo {
-  width: 102vh;
-  margin-top: 21px;
+  width: 75%;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -37,7 +37,7 @@
   justify-content: center;
   width: 200px;
   height: 50px;
-  background-color: darkgray;
+  background-color: transparent;
   border-style: solid;
   color: white;
   border-width: 1px;
@@ -54,7 +54,7 @@
   justify-content: center;
   width: 200px;
   height: 50px;
-  background-color: transparent;
+  background-color: darkgray;
   border-color: darkgray;
   border-style: solid;
   color: whitesmoke;
