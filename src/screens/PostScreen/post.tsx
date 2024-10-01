@@ -9,7 +9,7 @@ export const Post = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        "https://fullstack-student-backend.onrender.com/api/auth"
+        "http://localhost:5000/Contents/"
       );
       setUserPost(data);
     };

@@ -16,14 +16,18 @@ import Users from "../../screens/UserScreen/Users";
 import Post from "../../screens/PostScreen/post";
 import Postdetails from "../../screens/PostScreen/PostDetails";
 import SignUp from "../../screens/Signup screen/SignUp";
+import FetchandDelete from "../../screens/UserScreen/FetchandDelete";
+import ResultDetails from "../../screens/ResultScreen/ResultDetails";
 
 const Home = () => {
   return (
     <div>
-      {/* <Navbar />
-      <Hero /> */}
-      <Postdetails />
-      <Post />
+      {/* <ResultDetails /> */}
+      {/* <FetchandDelete /> */}
+      <Navbar />
+      {/* <Hero /> */}
+      {/* <Postdetails />
+      <Post /> */}
       {/* <Users /> */}
       {/* <Product /> */}
       {/* <Rough /> */}

@@ -1,49 +1,51 @@
 import React, { useState } from "react";
-import "./SignUp.css";
+import { useNavigate, useParams } from "react-router-dom";
 import ResponsiveAppBar from "../../componets/Navbar/Navbar";
 import axios from "axios";
-import { Navigate, useNavigate } from "react-router-dom";
-import { Title } from "@mui/icons-material";
-import { title } from "process";
-const SignUp = () => {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [confirmpassword, setConfirmpassword] = useState("");
+
+const UpdateMyPersonalProfile = () => {
+  //   const { _id } = useParams();
+  const info = localStorage.getItem("userId");
+  console.log(info);
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmpassword] = useState("");
   const [sucessMsg, setSucessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
-  // console.log(Title);
-  // console.log(Body);
-  // console.log(email);
-  // console.log(password);
-  // console.log(confirmpassword);
+  console.log(firstName);
+  console.log(lastName);
+  console.log(email);
+  console.log(password);
+  console.log(confirmpassword);
   const navigate = useNavigate();
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setLoading(true);
     const data = {
-      title: title,
-      body: body,
-      // email: email,
-      // password: password,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
     };
 
     const headers: any = {
       "Content-Type": "application/json",
     };
     axios
-      .post(
-        "http://localhost:5000/Contents/",
+      .put(
+        `https://fullstack-student-backend.onrender.com/api/auth/update/${info}`,
 
         data,
         headers
       )
       .then((response: any) => {
         console.log(response.data);
-        localStorage.setItem("title", response.data.title);
-        localStorage.setItem("body", response.data.body);
+        localStorage.setItem("userId", response.data._id);
+        localStorage.setItem("firstName", response.data.firstName);
         navigate("/");
         setLoading(false);
         if (response.data) {
@@ -58,6 +60,7 @@ const SignUp = () => {
   };
   return (
     <>
+      UpdateMyPersonalProfile
       <ResponsiveAppBar />
       <div>
         <div className="dd flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -68,7 +71,7 @@ const SignUp = () => {
               className="mx-auto h-10 w-auto"
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Create a post Request
+              Update user profile
             </h2>
           </div>
 
@@ -81,20 +84,19 @@ const SignUp = () => {
             >
               <div>
                 <label
-                  htmlFor="title"
+                  htmlFor="FirstName"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Title
+                  FirstName
                 </label>
                 <div className="mt-2">
                   <input
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                     id="FirstName"
-                    name="Title"
+                    name="firstName"
                     type="text"
-                    required
-                    autoComplete="Title"
+                    autoComplete="FirstName"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -102,25 +104,25 @@ const SignUp = () => {
 
               <div>
                 <label
-                  htmlFor="body"
+                  htmlFor="lastName"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  body
+                  LastName
                 </label>
                 <div className="mt-2">
-                  <textarea
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
-                    id="body"
-                    name="body"
-                    required
-                    autoComplete="body"
+                  <input
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    id="LastName"
+                    name="LastName"
+                    type="text"
+                    autoComplete="LastName"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
               <div>
-                {/* <label
+                <label
                   htmlFor="email"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
@@ -133,14 +135,13 @@ const SignUp = () => {
                     id="email"
                     name="email"
                     type="text"
-                    required
                     autoComplete="email"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                </div> */}
+                </div>
               </div>
 
-              {/* <div>
+              <div>
                 <div className="flex items-center justify-between">
                   <label
                     htmlFor="password"
@@ -164,14 +165,13 @@ const SignUp = () => {
                     id="password"
                     name="password"
                     type="password"
-                    required
                     autoComplete="current-password"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                </div> 
-              </div> */}
+                </div>
+              </div>
               <div>
-                {/* <label
+                <label
                   htmlFor="confirm password"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
@@ -184,11 +184,10 @@ const SignUp = () => {
                     id="confirm password"
                     name="confirm password"
                     type="password"
-                    required
                     autoComplete="confirm password"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                </div> */}
+                </div>
               </div>
               {loading ? (
                 <div>Loading.....</div>
@@ -198,7 +197,7 @@ const SignUp = () => {
                     type="submit"
                     className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Sign in
+                    Update profile
                   </button>
                 </div>
               )}
@@ -225,4 +224,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default UpdateMyPersonalProfile;

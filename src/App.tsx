@@ -13,6 +13,8 @@ import UserDetailsScreen from "./screens/UserScreen/UserDetailsScreen";
 import SignUp from "./screens/Signup screen/SignUp";
 import Postdetails from "./screens/PostScreen/PostDetails";
 import Update from "./screens/PostScreen/Update";
+import FetchandDelete from "./screens/UserScreen/FetchandDelete";
+import UpdateMyPersonalProfile from "./screens/UserScreen/UpdateMyPersonalProfile";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/p" element={<UpdateMyPersonalProfile />} />
+          <Route path="/del" element={<FetchandDelete />} />
           <Route path="/login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/About-us" element={<About />} />
