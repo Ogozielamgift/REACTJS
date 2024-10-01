@@ -15,6 +15,7 @@ import Postdetails from "./screens/PostScreen/PostDetails";
 import Update from "./screens/PostScreen/Update";
 import FetchandDelete from "./screens/UserScreen/FetchandDelete";
 import UpdateMyPersonalProfile from "./screens/UserScreen/UpdateMyPersonalProfile";
+import Post from "./screens/PostScreen/post";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/del" element={<FetchandDelete />} />
           <Route path="/login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/post" element={<Post />} />
           <Route path="/About-us" element={<About />} />
           <Route path="/Contact us" element={<ContactUs />} />
           <Route

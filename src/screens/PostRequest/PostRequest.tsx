@@ -1,31 +1,20 @@
-import React, { useState } from "react";
-import "./SignUp.css";
-import ResponsiveAppBar from "../../componets/Navbar/Navbar";
 import axios from "axios";
-import { Navigate, useNavigate } from "react-router-dom";
-const SignUp = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmpassword, setConfirmpassword] = useState("");
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const PostRequest = () => {
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
   const [sucessMsg, setSucessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
-  console.log(firstName);
-  console.log(lastName);
-  console.log(email);
-  console.log(password);
-  console.log(confirmpassword);
   const navigate = useNavigate();
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setLoading(true);
     const data = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
+      title: title,
+      body: body,
     };
 
     const headers: any = {
@@ -33,15 +22,15 @@ const SignUp = () => {
     };
     axios
       .post(
-        "https://fullstack-student-backend.onrender.com/api/auth",
+        "http://localhost:5000/Contents/",
 
         data,
         headers
       )
       .then((response: any) => {
         console.log(response.data);
-        localStorage.setItem("userId", response.data._id);
-        localStorage.setItem("firstName", response.data.firstName);
+        localStorage.setItem("title", response.data.title);
+        localStorage.setItem("body", response.data.body);
         navigate("/");
         setLoading(false);
         if (response.data) {
@@ -56,7 +45,6 @@ const SignUp = () => {
   };
   return (
     <>
-      <ResponsiveAppBar />
       <div>
         <div className="dd flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -82,12 +70,12 @@ const SignUp = () => {
                   htmlFor="FirstName"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  FirstName
+                  Title
                 </label>
                 <div className="mt-2">
                   <input
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
                     id="FirstName"
                     name="firstName"
                     type="text"
@@ -103,12 +91,12 @@ const SignUp = () => {
                   htmlFor="lastName"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  LastName
+                  Body
                 </label>
                 <div className="mt-2">
                   <input
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
+                    value={body}
+                    onChange={(e) => setBody(e.target.value)}
                     id="LastName"
                     name="LastName"
                     type="text"
@@ -118,7 +106,7 @@ const SignUp = () => {
                   />
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium leading-6 text-gray-900"
@@ -137,9 +125,8 @@ const SignUp = () => {
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
-              </div>
-
-              <div>
+              </div> */}
+              {/* <div>
                 <div className="flex items-center justify-between">
                   <label
                     htmlFor="password"
@@ -168,8 +155,8 @@ const SignUp = () => {
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
-              </div>
-              <div>
+              </div>  */}
+              {/* <div>
                 <label
                   htmlFor="confirm password"
                   className="block text-sm font-medium leading-6 text-gray-900"
@@ -188,7 +175,7 @@ const SignUp = () => {
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
-              </div>
+              </div> */}
               {loading ? (
                 <div>Loading.....</div>
               ) : (
@@ -223,5 +210,4 @@ const SignUp = () => {
     </>
   );
 };
-
-export default SignUp;
+export default PostRequest;

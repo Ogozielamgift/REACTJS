@@ -8,9 +8,7 @@ const Users = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
-      );
+      const { data } = await axios.get("http://localhost:5000/Contents/");
       setUserInfo(data);
     };
     fetchData();
@@ -37,11 +35,11 @@ const Users = () => {
                       <span className="bg-secondary p-1 px-4 rounded text-white">
                         Pro
                       </span>
-                      <h5 className="mt-2 mb-0">{items?.name}</h5>
-                      <span>{items?.email}</span>
+                      <h5 className="mt-2 mb-0">{items?.title}</h5>
+                      <span>{items?.body}</span>
 
                       <div className="px-4 mt-1">
-                        <p className="fonts">{items?.company?.name}</p>
+                        <p className="fonts"></p>
                       </div>
 
                       <ul className="social-list">
